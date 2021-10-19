@@ -9,5 +9,12 @@
   ],
   "activity": "games!",
   "activity_type": "playing|watching|listening|competing",
-  "status_type": "online|idle|dnd"
+  "status_type": "online|idle|dnd",
+  "twitter_data":{
+    "bearer_token":{"Authorization": "Bearer YOUR_BEARER_TOKEN"},
+    "base_url":"https://api.twitter.com/1.1/"
+  },
+  "pixiv_data":{
+    "refresh_token": "YOUR_TOKEN"
+  }  
 }
