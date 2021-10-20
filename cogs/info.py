@@ -1,3 +1,4 @@
+from datetime import datetime
 import time
 import discord
 import psutil
@@ -40,6 +41,8 @@ class Information(commands.Cog):
     @commands.command(aliases=["info", "stats", "status"])
     async def about(self, ctx):
         """ About the bot """
+        if not hasattr(self.bot, "uptime"):
+            self.bot.uptime = datetime.now()
         ramUsage = self.process.memory_full_info().rss / 1024**2
         avgmembers = sum(g.member_count for g in self.bot.guilds) / len(self.bot.guilds)
 
